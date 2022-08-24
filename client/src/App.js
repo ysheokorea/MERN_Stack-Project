@@ -5,7 +5,7 @@ import Profile from "./pages/profile/Profile";
 function App() {
   return (
     <div>
-      <Profile />
+      <Home />
     </div>
   );
 }

@@ -1,5 +1,5 @@
-# Booking Application
-You can book every hotel you want.
+# MERN Stack Application
+MERN Stack Application Toolkit
 
 ## MERN STACK
 1. MongoDB
@@ -13,6 +13,3 @@ You can book every hotel you want.
 3. useNavigate
 4. useReducer
 5. useFetch(사용자 정의)
-
-## Development Features
-1. Authentication : naive + password module

@@ -1,6 +1,9 @@
 # MERN Stack Application
 MERN Stack Application Toolkit
 
+## Project
+- Real Time Chatting Application
+
 ## MERN STACK
 1. MongoDB
 2. Express.js
@@ -14,4 +17,3 @@ MERN Stack Application Toolkit
 4. useReducer
 5. useFetch(사용자 정의)
 
-test

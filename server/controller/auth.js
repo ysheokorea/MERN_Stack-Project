@@ -16,12 +16,13 @@ const signUp = async (req, res) => {
     const savedUser = await newUser.save();
     res.status(200).json(savedUser);
   } catch (error) {
+    console.log(error);
     res.status(500).json(error);
   }
 };
 
 // Sign In
-const signIn = async (req, res) => {
+const signIn = async (req, res, next) => {
   try {
     const user = await User.findOne({ email: req.body.email });
     !user && res.status(404).json("User Not Found");
@@ -34,7 +35,7 @@ const signIn = async (req, res) => {
 
     res.status(200).json(user);
   } catch (error) {
-    res.status(500).json(error);
+    next(error);
   }
 };
 

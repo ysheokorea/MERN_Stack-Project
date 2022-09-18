@@ -117,7 +117,6 @@ export default function Messenger() {
   
   useEffect(() => {
     socket.on("getMessage", (data) => {
-      console.log(data);
       setArrivalMessage({
         sender: data.senderId,
         text: data.text,

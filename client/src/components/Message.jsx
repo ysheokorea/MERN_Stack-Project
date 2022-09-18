@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {format} from 'timeago.js'
 
 const Container = styled.div`
     display : flex;
@@ -34,15 +35,16 @@ const MesasgeBottom = styled.div`
     margin-top : 10px;
 `;
 
-export default function Message({own}) {
+export default function Message({message, own}) {
+
   return (
     <Container style={own ? {alignItems : "flex-end"} : {}}>
         <MessageTop>
             <Avatar src="https://img.hankyung.com/photo/202206/BF.30386175.1.jpg"/>
-            <MessageText style={own ? {backgroundColor : "#D0D0D0", color : "#111"} : {}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corporis totam dolores reprehenderit, velit possimus quas fugiat distinctio eum vero, labore quia harum culpa qui. Laudantium dolor laboriosam ipsum porro.</MessageText>
+            <MessageText style={own ? {backgroundColor : "#D0D0D0", color : "#111"} : {}}>{message?.text}</MessageText>
         </MessageTop>
         <MesasgeBottom>
-            1 hour ago
+            {format(message?.createdAt)}
         </MesasgeBottom>
     </Container>
   )
